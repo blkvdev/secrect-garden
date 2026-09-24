@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Secret Garden | Floricultura</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-main container"><button class="icon-btn" id="searchOpen" aria-label="Buscar">⌕</button><a
+                class="brand" href="#inicio"><span>SECRET</span><em>garden</em></a><button class="cart-btn"
+                id="cartOpen">🛒 <span id="cartCount">0</span></button></div>
+        <nav class="nav"><a href="#inicio">Início</a><a href="#buques">Buquês</a><a href="#flores">Flores</a><a
+                href="#plantas">Plantas</a><a href="#promocoes">Promoções</a></nav>
+    </header>
+    <main>
+        <section id="inicio" class="page active">
+            <div class="hero container">
+                <div>
+                    <p class="eyebrow">Flores que falam por você</p>
+                    <h1>Uma flor, mil significados.</h1>
+                    <p>Produtos cadastrados e atualizados pelo painel administrativo.</p><a class="button"
+                        href="#promocoes">Ver promoções</a>
+                </div>
+                <div class="hero-art">🌷</div>
+            </div>
+            <section class="container block">
+                <div class="section-heading">
+                    <p class="eyebrow">Seleção especial</p>
+                    <h2>Destaques</h2>
+                </div>
+                <div id="featuredProducts" class="products"></div>
+            </section>
+        </section>
+        <section id="buques" class="page">
+            <div class="container block">
+                <h1>Buquês</h1>
+                <div class="products" data-category="buques"></div>
+            </div>
+        </section>
+        <section id="flores" class="page">
+            <div class="container block">
+                <h1>Flores</h1>
+                <div class="products" data-category="flores"></div>
+            </div>
+        </section>
+        <section id="plantas" class="page">
+            <div class="container block">
+                <h1>Plantas</h1>
+                <div class="products" data-category="plantas"></div>
+            </div>
+        </section>
+        <section id="promocoes" class="page">
+            <div class="container block">
+                <h1>Promoções</h1>
+                <div id="promotions" class="promo-grid"></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="brand light"><span>SECRET</span><em>garden</em></div>
+            <p>© <span id="year"></span> Secret Garden</p>
+        </div>
+    </footer>
+    <div class="overlay" id="searchOverlay" hidden>
+        <section class="modal"><button class="close" data-close="searchOverlay">×</button>
+            <h2>Buscar produtos</h2><input id="searchInput" type="search" placeholder="Digite o nome do produto">
+            <div id="searchResults"></div>
+        </section>
+    </div>
+    <div class="overlay" id="cartOverlay" hidden>
+        <aside class="modal cart-panel"><button class="close" data-close="cartOverlay">×</button>
+            <h2>Seu carrinho</h2>
+            <div id="cartItems"></div>
+            <div class="cart-total"><span>Total</span><strong id="cartTotal">R$ 0,00</strong></div><label>Nome<input
+                    id="customerName"></label><label>WhatsApp<input
+                    id="customerPhone"></label><label>Endereço/observação<textarea
+                    id="customerNote"></textarea></label><button class="button full" id="checkout">Enviar
+                pedido</button>
+        </aside>
+    </div>
+    <div id="toast" class="toast"></div>
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>

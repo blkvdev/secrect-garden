@@ -1,0 +1,16 @@
+SECRET GARDEN - SITE FUNCIONAL COM FIREBASE
+
+1. Configure firebase-config.js.
+2. Ative Authentication por E-mail/senha e crie o usuário administrador.
+3. Crie o Firestore.
+4. Publique firestore.rules.
+5. Rode em servidor local, nunca abrindo index.html diretamente.
+
+Com Python: python -m http.server 5500
+Depois: http://localhost:5500
+
+Arquivos principais:
+index.html = loja
+login.html = login administrativo
+admin.html = painel
+firestore.rules = segurança do banco
